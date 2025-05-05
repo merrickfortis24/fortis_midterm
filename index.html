@@ -357,6 +357,28 @@
             z-index: 1000; /* Ensure it stays above other elements */
         }
 
+        @media (max-width: 800px) {
+            #header {
+                background-image: url(images/phone\ background.jpg);
+            }
+            .hideOnMobile {
+                display: none;
+            }
+            .menu-button {
+                display: block;
+            }
+        }
+        @media (max-width: 400px) {
+            .sidebar {
+                width: 100%;
+            }
+        }
+        #msg {
+            color: #61b752;
+            margin-top: -40px;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
