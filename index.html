@@ -446,15 +446,15 @@
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>2023 - current</span><br>Studied Java Programming at National University Lipa</li>
-                            <li><span>2023 - current</span><br>Learned about if/else statement</li>
-                            <li><span>2023 - current</span><br>Learned looping in Introduction to Programming</li>
+                            <li><span>2023 - current</span><br>Learned PHP backend development using CRUD operations.</li>
+                            <li><span>2023 - current</span><br>Studied database management concepts and practiced implementation using MySQL.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2023 - current</span><br>Currently studying at National University with the program of Bachelor of Science in Information Technology with specialization in Mobile and Web Applications</li>
-                            <li><span>2022</span><br>Graduated Senior High School with an average of 94% at Concepcion National High School</li>
-                            <li><span>2020</span><br>Graduated as one of the Special Science Class with an average of 90% at Concepcion National High School</li>
+                            <li><span>2022</span><br>Graduated Senior High School at Concepcion National High School</li>
+                            <li><span>2020</span><br>Graduated as one of the Special Science Class at Concepcion National High School</li>
                         </ul>
                     </div>
                 </div>
@@ -470,19 +470,19 @@
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro et fuga neque accusantium illo architecto cum? Ipsam harum quibusdam similique fugit laudantium ullam vitae labore debitis beatae. Suscipit, est possimus?</p>
+                <p>Developed a responsive coffee shop website, 'Nai Tsa', using HTML, CSS, and Bootstrap; focused on clean UI design and mobile-friendly layout.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-crop"></i>
                 <h2>UI/UX Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro et fuga neque accusantium illo architecto cum? Ipsam harum quibusdam similique fugit laudantium ullam vitae labore debitis beatae. Suscipit, est possimus?</p>
+                <p>Designed the UI/UX of "Aralytics", a study scheduling app using Android Studio, focused on intuitive navigation and user-centered layout for enhanced productivity.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-brands fa-app-store-ios"></i>
                 <h2>App Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro et fuga neque accusantium illo architecto cum? Ipsam harum quibusdam similique fugit laudantium ullam vitae labore debitis beatae. Suscipit, est possimus?</p>
+                <p>Developed 'Aralytics', a study scheduling mobile app using Android Studio, incorporating user-friendly UI/UX design and core features like customizable study plans and reminders.</p>
                 <a href="#">Learn more</a>
             </div>
         </div>
@@ -553,16 +553,28 @@
     </div>
 
     <script>
+        function showSidebar(event) {
+            if (event) {
+                event.preventDefault();
+            }
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+    </script>
+    
+    <script>
         function hideSidebar(event) {
             if (event) {
                 event.preventDefault();
             }
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.display = 'none';
-    }
+        }
     </script>
-
+    
+    
     <script>
+        
         var tablinks= document.getElementsByClassName("tab-links");
         var tabcontents= document.getElementsByClassName("tab-contents");
         function opentab(tabname){
@@ -575,16 +587,17 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab")
         }
+    
     </script>
-
+    
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzkAMG03nn7-P1piIzi5fisTzGRpKK5BDcKzxUT3X6Qb-1ELlvij6pwUe3LsJ9-jQEZ/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
-        
+      
         form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
                 msg.innerHTML = "Message sent successfully"
                 setTimeout(function(){
@@ -594,7 +607,7 @@
             })
             .catch(error => console.error('Error!', error.message))
         })
-    </script>
+      </script>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
